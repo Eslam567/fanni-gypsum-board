@@ -52,6 +52,51 @@ footer{background:#0b1118;color:#aab3bc;padding:22px 0;text-align:center;font-si
 .manage-item button{border:0;border-radius:8px;padding:6px 8px;background:#f4dada;color:#8c1d1d;cursor:pointer}
 .dark-outline{border:1px solid #a6adb4;color:var(--ink);margin-top:12px}
 
+/* معرض صور الأعمال */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.photo-project {
+  display: block;
+  position: relative;
+  min-height: 220px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #172431;
+  cursor: pointer;
+}
+
+.photo-project img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease;
+}
+
+.photo-project:hover img {
+  transform: scale(1.04);
+}
+
+.photo-caption {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background: #172431;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 </head>
 <body>
