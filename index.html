@@ -193,8 +193,7 @@ document.getElementById('requestForm').addEventListener('submit',function(e){
    gallery.querySelectorAll('[data-added-photo]').forEach(el=>el.remove());
    photos.forEach(photo=>{
      const url=URL.createObjectURL(photo.blob);
-     const card=document.createElement('a');card.className='project photo-project';card.href='#contact';card.dataset.addedPhoto='true';
-     const img=document.createElement('img');img.src=url;img.alt=photo.name||'صورة من أعمال فني جبس بورد';img.loading='lazy';
+     const card=document.createElement('a');card.className='project photo-project';card.href=url;card.target='_blank';card.rel='noopener';card.dataset.addedPhoto='true'; const img=document.createElement('img');img.src=url;img.alt=photo.name||'صورة من أعمال فني جبس بورد';img.loading='lazy';
      const cap=document.createElement('span');cap.className='photo-caption';cap.textContent=photo.name||'عمل جديد';
      card.append(img,cap);gallery.prepend(card);
      const item=document.createElement('div');item.className='manage-item';
